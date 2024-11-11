@@ -24,17 +24,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><div className="flex max-w-6xl mx-auto justify-between">
-        <div>
-          <Sidebar/>
+      >
+        <div className="flex max-w-6xl mx-auto justify-between">
+          <div className="hidden sm:inline border-r h-screen">
+            <Sidebar />
+          </div>
+          <div>{children}</div>
+          <div>
+            <News />
+          </div>
         </div>
-        <div>
-        {children}
-        </div>
-        <div>
-        <News/>
-        </div>
-      </div>
       </body>
     </html>
   );
